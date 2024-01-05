@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+de:
+  first_name: John
+  last_name: Doe
+  email: john.doe@example.com
+  ssn: '123456789'
+  locale: 'de'
+
+fr:
+  first_name: Will
+  last_name: Smith
+  email: will.smith@example.com
+  ssn: '987654321'
+  locale: 'fr'

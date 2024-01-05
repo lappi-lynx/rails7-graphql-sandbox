@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+investing:
+  name: toTheMoon
+  type: 0
+  currency: USD
+
+pension:
+  name: toThePension
+  type: 1
+  currency: CHF

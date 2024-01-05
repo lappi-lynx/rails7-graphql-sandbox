@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+amzn:
+  ticker: AMZN
+  quantity: 100
+  latest_price: 14505
+  market_iso_code: XNAS
+
+two:
+  ticker: TSLA
+  quantity: 50
+  latest_price: 23750
+  market_iso_code: XNAS
