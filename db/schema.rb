@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_212305) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "type", default: 0
+    t.integer "holdings_type", default: 0
     t.string "currency", null: false
     t.bigint "client_id", null: false
     t.datetime "created_at", null: false

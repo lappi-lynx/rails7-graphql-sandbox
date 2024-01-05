@@ -2,7 +2,7 @@ class Account < ApplicationRecord
   belongs_to :client
   has_many :assets
 
-  enum :type, [:investing, :pension]
+  enum :holdings_type, [:investing, :pension]
 
-  validates :name, :type, :currency, presence: true
+  validates :name, :holdings_type, :currency, presence: true
 end
