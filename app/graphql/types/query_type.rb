@@ -6,6 +6,12 @@ module Types
       argument :id, ID, required: true, description: "ID of the object."
     end
 
+    field :clients, [Types::ClientType], null: false, description: "Return a list of clients"
+
+    def clients
+      Client.all
+    end
+
     def node(id:)
       context.schema.object_from_id(id, context)
     end
