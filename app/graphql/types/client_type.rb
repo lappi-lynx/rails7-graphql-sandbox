@@ -8,6 +8,7 @@ module Types
     field :email, String, null: false
     field :ssn, String, null: false
     field :locale, String
+    field :accounts, [Types::AccountType], null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
