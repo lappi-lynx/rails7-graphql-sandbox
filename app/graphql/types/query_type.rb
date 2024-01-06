@@ -9,7 +9,7 @@ module Types
     field :clients, [Types::ClientType], null: false, description: "Return a list of clients"
 
     def clients
-      Client.all
+      Client.includes(accounts: :assets).all
     end
 
     def node(id:)
