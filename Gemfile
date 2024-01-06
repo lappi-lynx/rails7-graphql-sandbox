@@ -48,3 +48,4 @@ end
 
 
 gem "graphql", "~> 2.2"
+gem "graphiql-rails"
