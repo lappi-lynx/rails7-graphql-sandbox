@@ -7,9 +7,15 @@ module Types
     end
 
     field :clients, [Types::ClientType], null: false, description: "Return a list of clients"
+    field :client, Types::ClientType, null: true, description: "Return a signle client" do
+      argument :id, ID, required: true, description: "ID of the client."
+    end
 
     def clients
       Client.includes(accounts: :assets).all
+    end
+    def client(id:)
+      Client.includes(accounts: :assets).find_by(id:)
     end
 
     def node(id:)
