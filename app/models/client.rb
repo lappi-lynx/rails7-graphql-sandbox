@@ -4,11 +4,9 @@ class Client < ApplicationRecord
   validates :first_name, :last_name, :email, :ssn, presence: true
 
   def total_equity(currency: BASE_CURRENCY)
-    total_in_cents = accounts.includes(:assets).reduce(0) do |sum, account|
+    accounts.includes(:assets).reduce(0) do |sum, account|
       sum += CurrencyConverter.convert(account.equity, account.currency, BASE_CURRENCY)
     end
-
-    (total_in_cents / 100).round(2)
   end
 
   private

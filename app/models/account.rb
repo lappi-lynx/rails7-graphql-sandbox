@@ -8,8 +8,9 @@ class Account < ApplicationRecord
 
   def equity
     # TODO use Money gem for currency conversion and operations
-    assets.reduce(0) do |sum, asset|
+    total_in_cents = assets.reduce(0) do |sum, asset|
       sum += BigDecimal(asset.latest_price.to_s) * asset.quantity
     end
+    (total_in_cents / 100).round(2)
   end
 end
