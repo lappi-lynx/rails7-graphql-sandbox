@@ -16,7 +16,7 @@ class CurrencyConverterTest < ActiveSupport::TestCase
   test "converts correctly from CHF to USD" do
     amount = 100
     expected_amount = amount * CurrencyConverter::RATES['USD']
-    assert_equal expected_amount, CurrencyConverter.convert(amount_in_chf, 'CHF', 'USD')
+    assert_equal expected_amount, CurrencyConverter.convert(amount, 'CHF', 'USD')
   end
 
   test "returns same amount for same currency conversion" do

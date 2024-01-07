@@ -6,7 +6,7 @@ de:
   last_name: Doe
   email: john.doe@example.com
   ssn: '123456789'
-  locale: 'de'
+  locale: de
 
 fr:
   id: 2
@@ -14,4 +14,4 @@ fr:
   last_name: Smith
   email: will.smith@example.com
   ssn: '987654321'
-  locale: 'fr'
+  locale: fr
