@@ -1,11 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 investing:
+  id: 1
   name: toTheMoon
   holdings_type: 0
   currency: USD
+  client_id: 1
 
 pension:
+  id: 2
   name: toThePension
   holdings_type: 1
   currency: CHF
+  client_id: 2
