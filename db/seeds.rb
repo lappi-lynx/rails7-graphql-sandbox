@@ -31,7 +31,7 @@ Account.all.each do |account|
       ticker: Faker::Finance.ticker,
       quantity: rand(100),
       latest_price: rand(10000),
-      market_iso_code: (account.currency == "USD" ? "XNAS" : "SIX"),
+      market_iso_code: (account.currency == "USD" ? "XNYS" : "SIX"),
       account: account
     )
   end

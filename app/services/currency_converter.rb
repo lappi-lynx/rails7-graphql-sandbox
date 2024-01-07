@@ -13,4 +13,8 @@ class CurrencyConverter
 
     (base_amount * RATES[to]).floor(2)
   end
+
+  def self.unsupported_currency?(currency)
+    CurrencyConverter::RATES.keys.exclude?(currency)
+  end
 end

@@ -4,12 +4,12 @@ amzn:
   ticker: AMZN
   quantity: 100
   latest_price: 14505
-  market_iso_code: XNAS
+  market_iso_code: XNYS
   account_id: 1
 
 two:
   ticker: TSLA
   quantity: 50
   latest_price: 23750
-  market_iso_code: XNAS
+  market_iso_code: XNYS
   account_id: 2

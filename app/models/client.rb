@@ -4,8 +4,10 @@ class Client < ApplicationRecord
   validates :first_name, :last_name, :email, :ssn, presence: true
 
   def total_equity(currency: BASE_CURRENCY)
+    return nil if ::CurrencyConverter.unsupported_currency?(currency)
+
     accounts.includes(:assets).reduce(0) do |sum, account|
-      sum += CurrencyConverter.convert(account.equity, account.currency, BASE_CURRENCY)
+      sum += ::CurrencyConverter.convert(account.equity, account.currency, currency)
     end
   end
 

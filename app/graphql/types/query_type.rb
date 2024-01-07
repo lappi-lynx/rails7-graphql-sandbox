@@ -2,11 +2,7 @@
 
 module Types
   class QueryType < Types::BaseObject
-    field :node, Types::NodeType, null: true, description: "Fetches an object given its ID." do
-      argument :id, ID, required: true, description: "ID of the object."
-    end
-
-    field :clients, [Types::ClientType], null: false, description: "Return a list of clients"
+    field :clients, [Types::ClientSimpleType], null: false, description: "Return a list of clients"
     field :client, Types::ClientType, null: true, description: "Return a signle client" do
       argument :id, ID, required: true, description: "ID of the client."
     end
