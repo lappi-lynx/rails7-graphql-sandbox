@@ -5,6 +5,7 @@ class CurrencyConverter
     'EUR' => 1.07
   }.freeze
 
+  # TODO use Money gem for currency conversion and operations
   def self.convert(amount, from, to)
     return amount if (from == to)
 
