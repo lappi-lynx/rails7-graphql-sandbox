@@ -6,9 +6,9 @@ class Client < ApplicationRecord
   def total_equity(currency: BASE_CURRENCY)
     return nil if ::CurrencyConverter.unsupported_currency?(currency)
 
-    accounts.includes(:assets).reduce(0) do |sum, account|
+    accounts.includes(:assets).reduce(0.0) do |sum, account|
       sum += ::CurrencyConverter.convert(account.equity, account.currency, currency)
-    end
+    end.round(2)
   end
 
   private
