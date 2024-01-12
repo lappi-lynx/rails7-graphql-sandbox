@@ -13,7 +13,7 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
 
     def type
-      object.holdings_type == 0 ? "investing" : "pension"
+      object.holdings_type
     end
   end
 end
