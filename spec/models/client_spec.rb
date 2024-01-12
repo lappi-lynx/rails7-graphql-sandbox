@@ -17,7 +17,7 @@ RSpec.describe Client, type: :model do
   end
 
   describe '#total_equity' do
-    let(:client) { create(:client) }
+    let(:client)    { create(:client) }
     let!(:account1) { create(:account, client: client, currency: 'USD') }
     let!(:account2) { create(:account, client: client, currency: 'EUR') }
 

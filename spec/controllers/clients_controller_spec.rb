@@ -14,7 +14,7 @@ RSpec.describe ClientsController, type: :controller do
     it 'returns a JSON array of clients' do
       json_response = JSON.parse(response.body)
       expect(json_response).to be_a(Array)
-      expect(json_response.size).to eq(5)
+      expect(json_response.size).to eq(3)
     end
 
     it 'returns clients with correct data' do

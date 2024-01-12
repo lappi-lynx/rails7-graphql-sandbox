@@ -6,9 +6,9 @@ FactoryBot.define do
     ssn { Faker::IDNumber.valid }
 
     trait :with_account do
-      after(:create) do |client|
-        create(:account, :investing, client: client)
-        create(:account, :pension, client: client)
+      after(:create) do |c|
+        create(:account, :investing, client: c)
+        create(:account, :pension, client: c)
       end
     end
   end
