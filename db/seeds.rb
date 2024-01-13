@@ -27,9 +27,12 @@ Client.all.each do |client|
 end
 
 Account.all.each do |account|
-  rand(5..20).times do
+  rand(5..15).times do
+    ticker = Faker::Finance.ticker
+
+    next if account.assets.where(ticker: ticker).present?
     Asset.create!(
-      ticker: Faker::Finance.ticker,
+      ticker: ticker,
       quantity: rand(100),
       latest_price: rand(10000),
       market_iso_code: (account.currency == "USD" ? "XNYS" : "SIX"),
