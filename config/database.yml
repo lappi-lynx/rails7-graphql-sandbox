@@ -78,7 +78,6 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: rails_7_graphql_production
-  username: rails_7_graphql
-  password: <%= ENV["RAILS_7_GRAPHQL_DATABASE_PASSWORD"] %>
+  adapter: sqlite3
+  pool: 5
+  database: db/production.sqlite3

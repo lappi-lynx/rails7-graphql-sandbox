@@ -26,7 +26,7 @@ Client.all.each do |client|
 end
 
 Account.all.each do |account|
-  3.times do
+  rand(5..20).times do
     Asset.create!(
       ticker: Faker::Finance.ticker,
       quantity: rand(100),
