@@ -1,11 +1,12 @@
-# create 5 clients with 2 accounts each with 3 assets each
+# create 5 clients with 2 accounts each with assets each
 
 5.times do
   Client.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.email,
-    ssn: Faker::IDNumber.valid
+    ssn: Faker::IDNumber.valid,
+    locale: 'de-DE'
   )
 end
 

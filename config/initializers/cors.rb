@@ -8,7 +8,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     # for react apollo client
-    origins "http://localhost:5173"
+    origins [/.*react-graphql-client-sandbox\.netlify\.app$/, 'http://localhost:5173']
 
     resource "*",
       headers: :any,

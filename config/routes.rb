@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'clients/index'
   get 'clients/show'
   if Rails.env.development?
+    # NOTE: can be used to test GraphiQL on heroku in prod if needed
     mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   end
   post "/graphql", to: "graphql#execute"
